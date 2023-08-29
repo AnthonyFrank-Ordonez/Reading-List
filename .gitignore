@@ -1,0 +1,8 @@
+# Ignore the files with following names below
+Project Reading List (With Comments).py
+
+# Ignore all the log files
+*.log
+
+# Ignore all files in any directory named temp
+temp/
