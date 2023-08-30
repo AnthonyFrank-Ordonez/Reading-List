@@ -108,6 +108,15 @@ def get_all_books() -> list[dict]:
     return books
 
 
+def check_csv_file():  # check if the files exist if not create
+    try:
+        with open("data_files/books.csv", "x", encoding="UTF-8") as book_list:
+            book_list.write("")
+
+    except FileExistsError:
+        pass
+
+
 def main():
     menu_choices: str = """Please Select the Following Options:
     
@@ -122,6 +131,8 @@ what is your choice: """
     print('')
 
     while (user_prompt := input(menu_choices).strip().lower()) != 'q':
+
+        check_csv_file()
 
         if user_prompt == "a":
             add_book()

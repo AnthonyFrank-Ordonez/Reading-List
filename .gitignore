@@ -6,3 +6,6 @@ Project Reading List (With Comments).py
 
 # Ignore all files in any directory named temp
 temp/
+
+# ignore the .idea folders
+.idea/
